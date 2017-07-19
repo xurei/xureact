@@ -141,4 +141,39 @@ describe('RenderCounter', function() {
 			expect(spyLog).to.have.not.been.calledWith('Rendering FakeComponentClass #3');
 		});
 	});
+	
+	describe('whith a custom label', function() {
+		it('should use this label in the log', function() {
+			//Prepare
+			const TestComponent = RenderCounter(FakeComponentClass, (component => "TestComponent_" + component.props.label)); //eslint-disable-line no-unused-vars
+			spyLog.reset();
+			
+			const component1 = mount(
+				<TestComponent val={42} label={'i1'}/>
+			);
+			const component2 = mount(
+				<TestComponent val={42} label={'i2'}/>
+			);
+			
+			//Verify (1)
+			expect(spyLog).to.have.been.calledWith('Rendering TestComponent_i1 #1');
+			expect(spyLog).to.have.been.calledWith('Rendering TestComponent_i2 #1');
+			
+			//Execute
+			component1.setProps({
+				val: 43
+			});
+			
+			//Verify (2)
+			expect(spyLog).to.have.been.calledWith('Rendering TestComponent_i1 #2');
+			
+			//Execute
+			component2.setProps({
+				val: 1
+			});
+			
+			//Verify (2)
+			expect(spyLog).to.have.been.calledWith('Rendering TestComponent_i2 #2');
+		});
+	});
 });
