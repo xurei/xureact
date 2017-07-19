@@ -38,6 +38,7 @@
     "chai": "^3.5.0",
     "chai-enzyme": "^0.6.1",
     "codecov": "^2.2.0",
+    "dirty-chai": "^2.0.1",
     "enzyme": "^2.8.2",
     "eslint": "^3.19.0",
     "eslint-plugin-promise": "^3.5.0",
