@@ -1,14 +1,13 @@
 import React from 'react'; //eslint-disable-line no-unused-vars
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import sinonChai from 'sinon-chai';
-import { spy } from 'sinon';
 chai.use(chaiEnzyme());
 chai.use(sinonChai);
 require('jsdom-global')();
 
-const Lorem = require('../src/react-lorem');
+const Lorem = require('../src/react-lorem'); //eslint-disable-line no-unused-vars
 
 /** @namespace describe */
 /** @namespace it */
