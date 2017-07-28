@@ -143,9 +143,6 @@ describe('RenderCounter', function() {
 	});
 	
 	describe('whith a custom label', function() {
-		it ('fake', function(done) {
-			done('error');
-		});
 		it('should use this label in the log', function() {
 			//Prepare
 			const TestComponent = RenderCounter(FakeComponentClass, (component => 'TestComponent_' + component.props.label)); //eslint-disable-line no-unused-vars

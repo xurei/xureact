@@ -4,6 +4,8 @@ import chai, { expect } from 'chai';
 import dirtyChai from 'dirty-chai';
 import chaiEnzyme from 'chai-enzyme';
 import sinonChai from 'sinon-chai';
+import createReactClass from 'create-react-class';
+
 chai.use(chaiEnzyme());
 chai.use(dirtyChai);
 chai.use(sinonChai);
@@ -32,6 +34,17 @@ const FakeComponentObj = React.createClass({
 		);
 	}
 });
+const FakeComponentDropin = createReactClass({
+	propTypes: {
+		val: PropTypes.any.isRequired
+	},
+	
+	render() {
+		return (
+		<div>Fake Component {this.props.val}</div>
+		);
+	}
+});
 
 /** @namespace describe */
 /** @namespace it */
@@ -44,6 +57,7 @@ describe('isReactComponent', function() {
 			//Execute + Verify
 			expect(isReactComponent(FakeComponentClass)).to.be.true();
 			expect(isReactComponent(FakeComponentObj)).to.be.true();
+			expect(isReactComponent(FakeComponentDropin)).to.be.true();
 			expect(isReactComponent((props) => props.val)).to.be.true();
 			expect(isReactComponent(function () { return null; })).to.be.true();
 			expect(isReactComponent(function (props) { return props.val; })).to.be.true();
