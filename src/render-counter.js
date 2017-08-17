@@ -11,7 +11,7 @@ const isReactComponent = require('./is-react-component');
  *
  * Component Wrapper that counts the num
  */
-module.exports = function RenderCounter(Component, componentLabel = () => Component.name) {
+module.exports = function RenderCounter(Component, componentLabel = () => Component.displayName) {
 	if (!isReactComponent(Component)) {
 		throw new Error('RenderCounter only accepts React Components');
 	}

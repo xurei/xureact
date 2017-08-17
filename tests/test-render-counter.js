@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import { mount } from 'enzyme';
@@ -10,41 +9,8 @@ chai.use(sinonChai);
 require('jsdom-global')();
 
 const RenderCounter = require ('../src/index').RenderCounter;
-const spyLog = spy(console, 'log');
 
-class FakeComponentClass extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			stateVal: 0,
-		};
-	}
-	
-	render() {
-		return (
-			<div>Fake Component {this.props.val}</div>
-		);
-	}
-	
-	shouldComponentUpdate(nextProps, nextState) {
-		return JSON.stringify(this.props) !== JSON.stringify(nextProps) || JSON.stringify(this.state) !== JSON.stringify(nextState);
-	}
-}
-FakeComponentClass.propTypes = {
-	val: PropTypes.any.isRequired
-};
-
-const FakeComponentObj = React.createClass({
-	propTypes: {
-		val: PropTypes.any.isRequired
-	},
-	
-	render() {
-		return (
-		<div>Fake Component {this.props.val}</div>
-		);
-	}
-});
+const FakeComponent = require('./util/fake-component');
 
 /** @namespace describe */
 /** @namespace it */
@@ -52,12 +18,20 @@ const FakeComponentObj = React.createClass({
 /** @namespace before */
 
 describe('RenderCounter', function() {
+	let spyLog;
+	beforeEach(() => {
+		spyLog = spy(console, 'log');
+	});
+	afterEach(() => {
+		spyLog.restore();
+	});
+	
 	it('should only accept a React Component or a function', function() {
         //Execute + Verify
 		
-		expect(RenderCounter(FakeComponentClass)); //no check to do
-		expect(RenderCounter(FakeComponentObj)); //no check to do
-		expect(RenderCounter((props) => props.val)); //no check to do
+		expect(RenderCounter(FakeComponent.Class)); //no check to do
+		expect(RenderCounter(FakeComponent.Obj)); //no check to do
+		expect(RenderCounter(FakeComponent.Func)); //no check to do
 		
 		expect(() => RenderCounter(100)).to.throw(Error, 'RenderCounter only accepts React Component');
 		expect(() => RenderCounter('a')).to.throw(Error, 'RenderCounter only accepts React Component');
@@ -68,14 +42,14 @@ describe('RenderCounter', function() {
 	});
 	it('should render the same thing as the child component', function() {
 		//Prepare
-		const TestComponent = RenderCounter(FakeComponentClass); //eslint-disable-line no-unused-vars
+		const TestComponent = RenderCounter(FakeComponent.Class); //eslint-disable-line no-unused-vars
 		
 		//Execute
 		const component = mount(
 			<TestComponent val={42}/>
 		);
 		const refComponent = mount(
-			<FakeComponentClass val={42}/>
+			<FakeComponent.Class val={42}/>
 		);
 		
 		//Verify
@@ -85,7 +59,7 @@ describe('RenderCounter', function() {
 	describe('when the props change', function() {
 		it('should increment the counter and show it in the log', function() {
 			//Prepare
-			const TestComponent = RenderCounter(FakeComponentClass); //eslint-disable-line no-unused-vars
+			const TestComponent = RenderCounter(FakeComponent.Class); //eslint-disable-line no-unused-vars
 			spyLog.reset();
 			
 			const component = mount(
@@ -93,35 +67,35 @@ describe('RenderCounter', function() {
 			);
 			
 			//Verify (1)
-			expect(spyLog).to.have.been.calledWith('Rendering FakeComponentClass #1');
+			expect(spyLog).to.have.been.calledWith('Rendering FakeComponent.Class #1');
 			
 			//Execute
 			component.setProps({
 				val: 43
 			});
 			//Verify (2)
-			expect(spyLog).to.have.been.calledWith('Rendering FakeComponentClass #2');
+			expect(spyLog).to.have.been.calledWith('Rendering FakeComponent.Class #2');
 			
 			//Execute
 			component.setProps({
 				val: 43
 			});
 			//Verify (3)
-			expect(spyLog).to.have.not.been.calledWith('Rendering FakeComponentClass #3');
+			expect(spyLog).to.have.not.been.calledWith('Rendering FakeComponent.Class #3');
 			
 			//Execute
 			component.setProps({
 				val: 44
 			});
 			//Verify (4)
-			expect(spyLog).to.have.been.calledWith('Rendering FakeComponentClass #3');
+			expect(spyLog).to.have.been.calledWith('Rendering FakeComponent.Class #3');
 		});
 	});
 	
 	describe('when the state changes', function() {
 		it('should increment the counter and show it in the log', function() {
 			//Prepare
-			const TestComponent = RenderCounter(FakeComponentClass); //eslint-disable-line no-unused-vars
+			const TestComponent = RenderCounter(FakeComponent.Class); //eslint-disable-line no-unused-vars
 			spyLog.reset();
 			
 			const component = mount(
@@ -129,7 +103,7 @@ describe('RenderCounter', function() {
 			);
 			
 			//Verify (1)
-			expect(spyLog).to.have.been.calledWith('Rendering FakeComponentClass #1');
+			expect(spyLog).to.have.been.calledWith('Rendering FakeComponent.Class #1');
 			
 			//Execute
 			component.setProps({
@@ -137,15 +111,15 @@ describe('RenderCounter', function() {
 			});
 			
 			//Verify (2)
-			expect(spyLog).to.have.been.calledWith('Rendering FakeComponentClass #2');
-			expect(spyLog).to.have.not.been.calledWith('Rendering FakeComponentClass #3');
+			expect(spyLog).to.have.been.calledWith('Rendering FakeComponent.Class #2');
+			expect(spyLog).to.have.not.been.calledWith('Rendering FakeComponent.Class #3');
 		});
 	});
 	
 	describe('whith a custom label', function() {
 		it('should use this label in the log', function() {
 			//Prepare
-			const TestComponent = RenderCounter(FakeComponentClass, (component => 'TestComponent_' + component.props.label)); //eslint-disable-line no-unused-vars
+			const TestComponent = RenderCounter(FakeComponent.Class, (component => 'TestComponent_' + component.props.label)); //eslint-disable-line no-unused-vars
 			spyLog.reset();
 			
 			const component1 = mount(
