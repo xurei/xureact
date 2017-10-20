@@ -10,6 +10,7 @@ class AboveFold extends React.Component {
 	static propTypes = {
 		className: PropTypes.string,
 		minHeight: PropTypes.number,
+		maxHeight: PropTypes.number,
 		marginTop: PropTypes.number,
 		marginBottom: PropTypes.number,
 	};
@@ -29,6 +30,7 @@ class AboveFold extends React.Component {
 
 const defaultHeights = {
 	minHeight: 180,
+	maxHeight: 1080,
 	marginTop: 0,
 	marginBottom: 250,
 };
@@ -41,13 +43,14 @@ export default Styled(AboveFold)`
 	${props => {
 		const propHeights = Object.assign({}, defaultHeights, {
 			minHeight: props.minHeight || defaultHeights.minHeight,
+			maxHeight: props.maxHeight || defaultHeights.maxHeight,
 			marginTop: props.marginTop || defaultHeights.marginTop,
 			marginBottom: props.marginBottom || defaultHeights.marginBottom,
 		});
 		
 		const heights = [];
 		heights[0] = propHeights.minHeight;
-		for (let i=propHeights.minHeight + propHeights.marginTop + propHeights.marginBottom; i < 1080; i+=10) {
+		for (let i=propHeights.minHeight + propHeights.marginTop + propHeights.marginBottom; i < propHeights.maxHeight; i+=10) {
 			heights[i] = Math.max(propHeights.minHeight, i - propHeights.marginTop - propHeights.marginBottom);
 		}
 		return Object.keys(heights).map(height => {
