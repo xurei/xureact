@@ -66,7 +66,7 @@ class Lorem extends React.Component {
 			if (out.endsWith(',') || out.endsWith(';') || out.endsWith('.')) {
 				out = out.substr(0, out.length-1);
 			}
-			return out + '.';
+			return `${out}.`;
 		})();
 		
 		return (
@@ -75,13 +75,7 @@ class Lorem extends React.Component {
 	}
 	
 	shouldComponentUpdate(nextProps) {
-		try {
-			return !deepEqual(this.props, nextProps);
-		}
-		catch (e) {
-			console.warn(e);
-			return true;
-		}
+		return !deepEqual(this.props, nextProps);
 	}
 }
 
