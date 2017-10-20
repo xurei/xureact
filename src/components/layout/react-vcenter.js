@@ -13,7 +13,7 @@ const style = {
  */
 class VCenter extends React.Component {
 	static propTypes = {
-		style: PropTypes.object
+		style: PropTypes.object,
 	};
 	
 	render() {

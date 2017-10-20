@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; //eslint-disable-line no-unused-vars
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import { mount } from 'enzyme';
@@ -7,6 +7,11 @@ import { spy } from 'sinon';
 chai.use(chaiEnzyme());
 chai.use(sinonChai);
 require('jsdom-global')();
+
+const describe = global.describe;
+const it = global.it;
+const beforeEach = global.beforeEach;
+const afterEach = global.afterEach;
 
 const RenderCounter = require ('../src/index').RenderCounter;
 
@@ -71,21 +76,21 @@ describe('RenderCounter', function() {
 			
 			//Execute
 			component.setProps({
-				val: 43
+				val: 43,
 			});
 			//Verify (2)
 			expect(spyLog).to.have.been.calledWith('Rendering FakeComponent.Class #2');
 			
 			//Execute
 			component.setProps({
-				val: 43
+				val: 43,
 			});
 			//Verify (3)
 			expect(spyLog).to.have.not.been.calledWith('Rendering FakeComponent.Class #3');
 			
 			//Execute
 			component.setProps({
-				val: 44
+				val: 44,
 			});
 			//Verify (4)
 			expect(spyLog).to.have.been.calledWith('Rendering FakeComponent.Class #3');
@@ -107,7 +112,7 @@ describe('RenderCounter', function() {
 			
 			//Execute
 			component.setProps({
-				val: 43
+				val: 43,
 			});
 			
 			//Verify (2)
@@ -119,7 +124,7 @@ describe('RenderCounter', function() {
 	describe('whith a custom label', function() {
 		it('should use this label in the log', function() {
 			//Prepare
-			const TestComponent = RenderCounter(FakeComponent.Class, (component => 'TestComponent_' + component.props.label)); //eslint-disable-line no-unused-vars
+			const TestComponent = RenderCounter(FakeComponent.Class, (component => `TestComponent_${component.props.label}`)); //eslint-disable-line no-unused-vars
 			spyLog.reset();
 			
 			const component1 = mount(
@@ -135,7 +140,7 @@ describe('RenderCounter', function() {
 			
 			//Execute
 			component1.setProps({
-				val: 43
+				val: 43,
 			});
 			
 			//Verify (2)
@@ -143,7 +148,7 @@ describe('RenderCounter', function() {
 			
 			//Execute
 			component2.setProps({
-				val: 1
+				val: 1,
 			});
 			
 			//Verify (2)

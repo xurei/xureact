@@ -20,20 +20,20 @@ class FakeComponentClass extends React.Component {
 	}
 }
 FakeComponentClass.propTypes = {
-	val: PropTypes.any.isRequired
+	val: PropTypes.any.isRequired,
 };
 FakeComponentClass.displayName = 'FakeComponent.Class';
 
 const FakeComponentObj = React.createClass({
 	propTypes: {
-		val: PropTypes.any.isRequired
+		val: PropTypes.any.isRequired,
 	},
 	
 	render() {
 		return (
 		<div>Fake Component {this.props.val}</div>
 		);
-	}
+	},
 });
 FakeComponentObj.displayName = 'FakeComponent.Obj';
 

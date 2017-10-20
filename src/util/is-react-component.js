@@ -1,7 +1,7 @@
 const React = require('react');
 
 const ReactClassComponentPrototype = (
-	(!!React.createClass) ?
+	(React.createClass) ?
 	(Object.getPrototypeOf(Object.getPrototypeOf(new (React.createClass({ render () {} }))()))) :
 	{}
 );
@@ -11,7 +11,7 @@ const ReactClassComponentDropInPrototype = (() => {
 		const createReactClass = require('create-react-class');
 		
 		return (
-			(!!createReactClass) ?
+			(createReactClass) ?
 			(Object.getPrototypeOf(Object.getPrototypeOf(new (createReactClass({ render () {} }))()))) :
 			{}
 		);

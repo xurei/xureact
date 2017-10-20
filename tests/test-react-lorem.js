@@ -7,7 +7,10 @@ chai.use(chaiEnzyme());
 chai.use(sinonChai);
 require('jsdom-global')();
 
-const Lorem = require('../src/components/react-lorem'); //eslint-disable-line no-unused-vars
+const describe = global.describe;
+const it = global.it;
+
+const Lorem = require('../src/components/react-lorem').default; //eslint-disable-line no-unused-vars
 
 /** @namespace describe */
 /** @namespace it */
@@ -19,7 +22,7 @@ describe('Lorem', function() {
 		it('returns the classical "Lorem ipsum dolor sit amet."', function() {
 			//Prepare + Execute
 			const component = shallow(
-			<Lorem words={5}/>
+				<Lorem words={5}/>
 			);
 			
 			//Verify
@@ -31,7 +34,7 @@ describe('Lorem', function() {
 		it('returns the custom sample text with the right amount of words (1)', function() {
 			//Prepare + Execute
 			const component = shallow(
-			<Lorem words={5} sampleText="Hello world, this is a great day to code."/>
+				<Lorem words={5} sampleText="Hello world, this is a great day to code."/>
 			);
 			
 			//Verify

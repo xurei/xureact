@@ -11,6 +11,9 @@ chai.use(dirtyChai);
 chai.use(sinonChai);
 require('jsdom-global')();
 
+const describe = global.describe;
+const it = global.it;
+
 const isReactComponent = require ('../src/index').isReactComponent;
 
 class FakeComponentClass extends React.Component {
@@ -21,29 +24,29 @@ class FakeComponentClass extends React.Component {
 	}
 }
 FakeComponentClass.propTypes = {
-	val: PropTypes.any.isRequired
+	val: PropTypes.any.isRequired,
 };
 const FakeComponentObj = React.createClass({
 	propTypes: {
-		val: PropTypes.any.isRequired
+		val: PropTypes.any.isRequired,
 	},
 	
 	render() {
 		return (
 		<div>Fake Component {this.props.val}</div>
 		);
-	}
+	},
 });
 const FakeComponentDropin = createReactClass({
 	propTypes: {
-		val: PropTypes.any.isRequired
+		val: PropTypes.any.isRequired,
 	},
 	
 	render() {
 		return (
 		<div>Fake Component {this.props.val}</div>
 		);
-	}
+	},
 });
 
 /** @namespace describe */
