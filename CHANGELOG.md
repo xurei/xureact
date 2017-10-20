@@ -5,6 +5,7 @@
 - ES6 export for tree-shaking
 - Add Component : `VCenter`
 - Add Component : `AboveFold`
+- Add Component : `RatioPlaceHolder`
 
 ## 1.0.1 - 2017-07-28
 - Add Component : `Lorem`
