@@ -1,14 +1,21 @@
 {
+	"extends": "xurei/react",
+	"parser": "babel-eslint",
+
 	"plugins": [
 		"promise",
 		"jsx",
 		"react",
 		"security"
 	],
+	"env": {
+		"es6": true
+	},
 	"parserOptions": {
-		"ecmaVersion": 6,
+		"ecmaVersion": 2017,
 		"sourceType": "module",
 		"ecmaFeatures": {
+			"experimentalObjectRestSpread": true,
 			"jsx": true
 		}
 	},
@@ -24,14 +31,6 @@
 		"curly": "warn",
 		"quotes": ["warn", "single"],
 
-		"security/detect-pseudoRandomBytes": "error",
-		"promise/always-return": "error",
-		"promise/no-return-wrap": "error",
-		"promise/param-names": "error",
-		"promise/catch-or-return": "error",
-		"promise/no-native": "off",
-		"promise/no-nesting": "warn",
-		"promise/no-promise-in-callback": "warn",
-		"promise/no-callback-in-promise": "warn"
+		"security/detect-pseudoRandomBytes": "error"
 	}
 }
