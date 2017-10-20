@@ -5,8 +5,20 @@
 [![GitHub issues](https://img.shields.io/github/issues/xurei/xureact.svg)](https://github.com/xurei/xureact/issues)
 [![Codacy grade](https://img.shields.io/codacy/grade/4a1aad470af24fa8950794b066560a11.svg)](https://www.codacy.com/app/xurei/xureact)
 
-A set of functions and wrappers to use with React components.
+React toolbox based on styled components.
 
-### Introduction
+### What's in there ?
 
-This serves as a lab repository for ideas and features that might migrate to other modules.
+`xureact` is a toolbox of useful components.
+
+### Philosophy
+- Prefer Pure components : all React components in `xureact` are meant to be pure, *i.e.* they do not use `state`.
+  There are some exceptions, for example with forms.
+- Composition is gold : the `xureact` components never inherits another component. Instead, they encapsulate them, or wrap them around (like `styled-components` do)
+
+### Concepts
+xureact contains three major types of element :
+
+1. **Components** : any **pure** component. Some might contain children, some not.
+1. **Wrappers** : similar to `ReactRedux.connect()` or `Styled()`, these are methods that decorates a pure component to give it extra features.
+1. **Utilitary** functions : any "classical" function that is useful within the context of `xureact`  

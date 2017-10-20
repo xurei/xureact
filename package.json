@@ -1,7 +1,7 @@
 {
   "name": "xureact",
   "version": "1.0.1",
-  "description": "Toolbox for React",
+  "description": "React toolbox based on styled components",
   "main": "lib/index.js",
   "scripts": {
     "pretest": "node_modules/.bin/eslint .",
