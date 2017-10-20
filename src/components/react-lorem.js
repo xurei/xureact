@@ -36,6 +36,11 @@ const defaultSampleWords = (
  * Simple lorem ipsum component for UI mocking.
  */
 class Lorem extends React.Component {
+	static propTypes = {
+		words: PropTypes.number,
+		sampleText: PropTypes.string,
+	};
+	
 	render() {
 		const words = this.props.words || 300;
 		const sampleWords = (() => {
@@ -80,9 +85,4 @@ class Lorem extends React.Component {
 	}
 }
 
-Lorem.propTypes = {
-	words: PropTypes.number,
-	sampleText: PropTypes.string,
-};
-
-module.exports = Lorem;
+export default Lorem;
