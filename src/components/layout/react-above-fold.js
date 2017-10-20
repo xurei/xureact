@@ -8,8 +8,10 @@ import Styled from 'styled-components';
  */
 class AboveFold extends React.Component {
 	static propTypes = {
-		campaign: PropTypes.object.isRequired,
-		user: PropTypes.object.isRequired,
+		className: PropTypes.string,
+		minHeight: PropTypes.number,
+		marginTop: PropTypes.number,
+		marginBottom: PropTypes.number,
 	};
 	
 	render() {
@@ -25,9 +27,10 @@ class AboveFold extends React.Component {
 	}
 }
 
-AboveFold.propTypes = {
-	minHeight: PropTypes.number,
-	marginBottom: PropTypes.number,
+const defaultHeights = {
+	minHeight: 180,
+	marginTop: 0,
+	marginBottom: 250,
 };
 
 //language=SCSS
@@ -36,12 +39,6 @@ export default Styled(AboveFold)`
 	transition: height linear 0.1s;
 	
 	${props => {
-		const defaultHeights = {
-			minHeight: 180,
-			marginTop: 0,
-			marginBottom: 250,
-		};
-		
 		const propHeights = Object.assign({}, defaultHeights, {
 			minHeight: props.minHeight || defaultHeights.minHeight,
 			marginTop: props.marginTop || defaultHeights.marginTop,
