@@ -1,5 +1,5 @@
 const React = require('react'); //eslint-disable-line no-unused-vars
-const isReactComponent = require('./is-react-component');
+const isReactComponent = require('../util/is-react-component');
 
 /**
  * RenderCounter

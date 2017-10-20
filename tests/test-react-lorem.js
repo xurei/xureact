@@ -7,7 +7,7 @@ chai.use(chaiEnzyme());
 chai.use(sinonChai);
 require('jsdom-global')();
 
-const Lorem = require('../src/react-lorem'); //eslint-disable-line no-unused-vars
+const Lorem = require('../src/components/react-lorem'); //eslint-disable-line no-unused-vars
 
 /** @namespace describe */
 /** @namespace it */
