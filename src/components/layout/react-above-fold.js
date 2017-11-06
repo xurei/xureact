@@ -3,6 +3,8 @@ const PropTypes = require('prop-types');
 const deepEqual = require('deep-eql');
 import Styled from 'styled-components';
 
+//FIXME AboveFold is kinda broken due to Styled-Components with SSR. It needs rework
+
 /**
  * Full width div with height above the fold. Resizes automatically on page resize
  */
