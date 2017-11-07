@@ -22,3 +22,8 @@ xureact contains three major types of element :
 1. **Components** : any **pure** component. Some might contain children, some not.
 1. **Wrappers** : similar to `ReactRedux.connect()` or `Styled()`, these are methods that decorates a pure component to give it extra features.
 1. **Utilitary** functions : any "classical" function that is useful within the context of `xureact`  
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/xurei/xureact/badge.svg?style=beer-square)](https://beerpay.io/xurei/xureact)  [![Beerpay](https://beerpay.io/xurei/xureact/make-wish.svg?style=flat-square)](https://beerpay.io/xurei/xureact?focus=wish)
