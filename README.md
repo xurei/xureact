@@ -4,6 +4,7 @@
 [![Codecov](https://img.shields.io/codecov/c/github/xurei/xureact.svg)](https://codecov.io/gh/xurei/xureact)
 [![GitHub issues](https://img.shields.io/github/issues/xurei/xureact.svg)](https://github.com/xurei/xureact/issues)
 [![Codacy grade](https://img.shields.io/codacy/grade/4a1aad470af24fa8950794b066560a11.svg)](https://www.codacy.com/app/xurei/xureact)
+[![Beerpay](https://beerpay.io/xurei/xureact/badge.svg?style=beer-square)](https://beerpay.io/xurei/xureact)
 
 React toolbox based on styled components.
 
