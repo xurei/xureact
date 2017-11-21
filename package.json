@@ -27,9 +27,11 @@
   "license": "MIT",
   "dependencies": {
     "deep-eql": "^2.0.2",
-    "prop-types": "^15.5.10",
+    "prop-types": "^15.5.10"
+  },
+  "peerDependencies": {
     "react": "^15.0.0",
-    "styled-components": "^2.2.1"
+    "react-dom": "^15.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -58,6 +60,7 @@
     "jsdom-global": "^3.0.2",
     "mocha": "^3.4.1",
     "react-addons-test-utils": "^15.5.1",
+    "react": "^15.0.0",
     "react-dom": "^15.5.4",
     "react-test-renderer": "^15.5.4",
     "react-tools": "^0.13.3",
