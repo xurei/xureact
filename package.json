@@ -1,6 +1,6 @@
 {
   "name": "xureact",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React toolbox based on styled components",
   "main": "lib/index.js",
   "scripts": {
