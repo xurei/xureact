@@ -14,13 +14,15 @@ const style = {
 class VCenter extends React.Component {
 	static propTypes = {
 		style: PropTypes.object,
+		className: PropTypes.string,
 	};
 	
 	render() {
-		const mystyle = Object.assign({}, this.props.style, style);
+		const props = this.props;
+		const mystyle = Object.assign({}, props.style, style);
 		return (
-			<div style={mystyle}>
-				{this.props.children}
+			<div style={mystyle} className={props.className || ''}>
+				{props.children}
 			</div>
 		);
 	}
