@@ -3,7 +3,7 @@
 # If you want Nodesource's container you would reference nodesource/node
 # Read more about containers on our dev center
 # http://devcenter.wercker.com/docs/containers/index.html
-box: node:10.0.0
+box: node:9.11.1
 # This is the build pipeline. Pipelines are the core of wercker
 # Read more about pipelines on our dev center
 # http://devcenter.wercker.com/docs/pipelines/index.html
@@ -32,7 +32,7 @@ build:
     - script:
         name: NPM install
         code: |
-          npm ci
+          npm install
           
     - npm-test
     
