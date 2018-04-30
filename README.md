@@ -6,7 +6,7 @@
 [![Codacy grade](https://img.shields.io/codacy/grade/4a1aad470af24fa8950794b066560a11.svg)](https://www.codacy.com/app/xurei/xureact)
 [![Beerpay](https://beerpay.io/xurei/xureact/badge.svg?style=beer-square)](https://beerpay.io/xurei/xureact)
 
-React toolbox based on styled components.
+React toolbox.
 
 ### What's in there ?
 
@@ -14,7 +14,6 @@ React toolbox based on styled components.
 
 ### Philosophy
 - Prefer Pure components : all React components in `xureact` are meant to be pure, *i.e.* they do not use `state`.
-  There are some exceptions, for example with forms.
 - Composition is gold : the `xureact` components never inherits another component. Instead, they encapsulate them, or wrap them around (like `styled-components` do)
 
 ### Concepts
