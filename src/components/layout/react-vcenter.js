@@ -12,7 +12,7 @@ const style = {
  * Vertical centering of children
  */
 class VCenter extends React.Component {
-	static propTypes = {
+	static propTypes = { //eslint-disable-line no-undef
 		style: PropTypes.object,
 		className: PropTypes.string,
 	};

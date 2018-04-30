@@ -5,7 +5,7 @@ const PropTypes = require('prop-types');
  * Div with a W:H ratio
  */
 class RatioPlaceHolder extends React.Component {
-	static propTypes = {
+	static propTypes = { //eslint-disable-line no-undef
 		className: PropTypes.string,
 		style: PropTypes.object,
 		ratio: PropTypes.string,

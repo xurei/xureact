@@ -36,7 +36,7 @@ const defaultSampleWords = (
  * Simple lorem ipsum component for UI mocking.
  */
 class Lorem extends React.Component {
-	static propTypes = {
+	static propTypes = { //eslint-disable-line no-undef
 		words: PropTypes.number,
 		sampleText: PropTypes.string,
 	};
