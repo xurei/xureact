@@ -1,5 +1,5 @@
-const React = require('react');
-const PropTypes = require('prop-types');
+import React from 'react';
+import * as PropTypes from 'prop-types';
 
 /**
  * Div with a W:H ratio
