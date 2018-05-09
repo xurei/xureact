@@ -3,7 +3,6 @@ import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import { shallow } from 'enzyme';
 import sinonChai from 'sinon-chai';
-import RatioPlaceHolder from '../src/components/layout/react-ratio-placeholder';
 chai.use(chaiEnzyme());
 chai.use(sinonChai);
 require('jsdom-global')();

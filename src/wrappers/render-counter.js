@@ -1,5 +1,4 @@
 const React = require('react'); //eslint-disable-line no-unused-vars
-const isReactComponent = require('../util/is-react-component');
 
 /**
  * RenderCounter
@@ -12,20 +11,15 @@ const isReactComponent = require('../util/is-react-component');
  * Component Wrapper that counts the num
  */
 module.exports = function RenderCounter(Component, componentLabel = () => Component.displayName) {
-	if (!isReactComponent(Component)) {
-		throw new Error('RenderCounter only accepts React Components');
-	}
-	else {
-		class RenderCounter extends Component {
-			constructor(props) {
-				super(props);
-				this.renderCounter = 0;
-			}
-			render() {
-				console.log(`Rendering ${componentLabel(this)} #${++this.renderCounter}`);
-				return super.render();
-			}
+	class _RenderCounter extends Component {
+		constructor(props) {
+			super(props);
+			this.renderCounter = 0;
 		}
-		return RenderCounter;
+		render() {
+			console.log(`Rendering ${componentLabel(this)} #${++this.renderCounter}`);
+			return super.render();
+		}
 	}
+	return _RenderCounter;
 };
