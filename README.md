@@ -26,4 +26,4 @@ xureact contains three major types of element :
 ## Support on Beerpay
 Hey dude! Help me out for a couple of :beers:!
 
-[![Beerpay](https://beerpay.io/xurei/xureact/badge.svg?style=beer-square)](https://beerpay.io/xurei/xureact)  [![Beerpay](https://beerpay.io/xurei/xureact/make-wish.svg?style=flat-square)](https://beerpay.io/xurei/xureact?focus=wish)
+[![Beerpay](https://beerpay.io/xurei/xureact/badge.svg?style=beer-square)](https://beerpay.io/xurei/xureact)  [![Beerpay](https://beerpay.io/xurei/xureact/make-wish.svg?style=flat-square)](https://beerpay.io/xurei/xureact?focus=wish) [![Greenkeeper badge](https://badges.greenkeeper.io/xurei/xureact.svg)](https://greenkeeper.io/)
