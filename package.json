@@ -27,7 +27,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "deep-eql": "^2.0.2",
+    "deep-eql": "^4.0.0",
     "prop-types": "^15.6.2"
   },
   "peerDependencies": {
