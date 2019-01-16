@@ -1,7 +1,17 @@
 {
 	"presets": [
-		"es2015",
-		"react"
+		[
+			"@babel/env",
+			{
+				"loose": true,
+				"shippedProposals": true,
+				"modules": "commonjs",
+				"targets": {
+					"ie": 9
+				}
+			}
+		],
+		"@babel/react"
 	],
 	"plugins": ["transform-class-properties"]
 }
