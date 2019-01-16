@@ -7,7 +7,7 @@
     "pretest": "node_modules/.bin/eslint .",
     "eslint": "node_modules/.bin/eslint .",
     "test": "./node_modules/.bin/mocha --compilers js:@babel/register tests",
-    "coverage": "node_modules/.bin/babel-node ./node_modules/isparta/bin/isparta cover --include 'src/**/*.js' _mocha -- --reporter dot tests",
+    "coverage": "(rm -R node_modules/isparta/node_modules/babel-core || exit 0) && node_modules/.bin/babel-node ./node_modules/isparta/bin/isparta cover --include 'src/**/*.js' _mocha -- --reporter dot tests",
     "postcoverage": "node_modules/.bin/codecov",
     "precompile": "npm test",
     "preversion": "npm test",
