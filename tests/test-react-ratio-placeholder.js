@@ -38,9 +38,9 @@ describe('RatioPlaceHolder', function() {
 		it('returns a div with 16:9 ratio', function() {
 			//Prepare + Execute
 			const component = shallow(
-			<RatioPlaceholder ratio="16:9">
-				Hello world
-			</RatioPlaceholder>
+				<RatioPlaceholder ratio="16:9">
+					Hello world
+				</RatioPlaceholder>
 			);
 			
 			//Verify

@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "pretest": "node_modules/.bin/eslint .",
-    "test": "./node_modules/.bin/mocha --compilers js:babel-core/register tests",
+    "eslint": "node_modules/.bin/eslint .",
+    "test": "./node_modules/.bin/mocha --compilers js:@babel/register tests",
     "coverage": "node_modules/.bin/babel-node ./node_modules/.bin/isparta cover --include 'src/**/*.js' _mocha -- --reporter dot tests",
     "postcoverage": "node_modules/.bin/codecov",
     "precompile": "npm test",
@@ -39,6 +40,7 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^7.1.5",
     "babel-plugin-transform-class-properties": "^6.24.1",

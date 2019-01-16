@@ -32,7 +32,7 @@ describe('RenderCounter', function() {
 	});
 	
 	it.skip('should only accept a React Component or a function', function() {
-        //Execute + Verify
+		//Execute + Verify
 		
 		expect(RenderCounter(FakeComponent.Class)); //no check to do
 		expect(RenderCounter(FakeComponent.Obj)); //no check to do

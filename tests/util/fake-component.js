@@ -31,7 +31,7 @@ const FakeComponentObj = React.createClass({
 	
 	render() {
 		return (
-		<div>Fake Component {this.props.val}</div>
+			<div>Fake Component {this.props.val}</div>
 		);
 	},
 });
