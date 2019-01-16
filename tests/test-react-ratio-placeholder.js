@@ -52,9 +52,9 @@ describe('RatioPlaceHolder', function() {
 		it('returns a div with 5:1 ratio', function() {
 			//Prepare + Execute
 			const component = shallow(
-			<RatioPlaceholder width="1000" height="200">
-				Hello world
-			</RatioPlaceholder>
+				<RatioPlaceholder width={1000} height={200}>
+					Hello world
+				</RatioPlaceholder>
 			);
 			
 			//Verify

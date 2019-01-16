@@ -22,20 +22,20 @@ build:
   # Read more about steps on our dev center:
   # http://devcenter.wercker.com/docs/steps/index.html
   steps:
-  
+
     - script:
         name: echo nodejs information
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
-          
+
     - script:
         name: NPM install
         code: |
           npm install
-          
+
     - npm-test
-    
+
     - script:
         name: Code coverage
         code: |
