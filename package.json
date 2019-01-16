@@ -47,7 +47,7 @@
     "babel-eslint": "^10.0.1",
     "blanket": "^1.2.3",
     "chai": "^3.5.0",
-    "chai-enzyme": "^0.6.1",
+    "chai-enzyme": "^0.8.0",
     "codecov": "^3.1.0",
     "create-react-class": "^15.6.3",
     "dirty-chai": "^2.0.1",
