@@ -46,6 +46,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "blanket": "^1.2.3",
+    "chai": "^4.0.0",
     "chai": "^3.5.0",
     "chai-enzyme": "^0.8.0",
     "codecov": "^3.1.0",
