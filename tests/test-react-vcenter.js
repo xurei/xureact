@@ -22,9 +22,9 @@ describe('VCenter', function() {
 		it('returns the correct HTML code', function() {
 			//Prepare + Execute
 			const component = shallow(
-			<VCenter className="my-vcenter">
-				Hello world
-			</VCenter>
+				<VCenter className="my-vcenter">
+					Hello world
+				</VCenter>
 			);
 			
 			//Verify
@@ -35,13 +35,13 @@ describe('VCenter', function() {
 		it('returns the correct HTML code', function() {
 			//Prepare + Execute
 			const component = shallow(
-				<VCenter className="my-vcenter" style={{ background: "red" }}>
+				<VCenter className="my-vcenter" style={{ background: 'red' }}> {/*eslint-disable-line react-native/no-inline-styles*/}
 					Hello world
 				</VCenter>
 			);
 			
 			//Verify
-			expect(component.html()).to.eq('<div style="background:red;display:block;position:relative;top:50%;transform:translateY(-50%);" class="my-vcenter">Hello world</div>');
+			expect(component.html()).to.eq('<div style="background:red;display:block;position:relative;top:50%;transform:translateY(-50%);" class="my-vcenter"> Hello world</div>');
 		});
 	});
 });
