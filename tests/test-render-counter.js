@@ -1,7 +1,7 @@
 import React from 'react'; //eslint-disable-line no-unused-vars
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
-import { mount } from 'enzyme';
+import { mount } from './util/enzyme';
 import sinonChai from 'sinon-chai';
 import { spy } from 'sinon';
 chai.use(chaiEnzyme());

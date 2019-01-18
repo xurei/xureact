@@ -1,7 +1,7 @@
 import React from 'react'; //eslint-disable-line no-unused-vars
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
-import { shallow } from 'enzyme';
+import { shallow } from './util/enzyme';
 import sinonChai from 'sinon-chai';
 chai.use(chaiEnzyme());
 chai.use(sinonChai);
