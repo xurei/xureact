@@ -1,6 +1,9 @@
 #Changelog 
 
-## 1.1.1 - 2018-05-09
+## 1.1.2 - 2019-01-18
+- Webpack Tree-shaking friendly build.
+
+## 1.1.1 - 2019-01-18
 - Updated build script for better standard
 - Fixed warnings in RatioPlaceholder
 - Updated dependencies

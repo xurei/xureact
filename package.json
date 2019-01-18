@@ -2,7 +2,9 @@
   "name": "xureact",
   "version": "1.1.1",
   "description": "React toolbox",
-  "main": "lib/index.js",
+  "main": "lib/cjs/index.js",
+  "module": "lib/module/index.js",
+  "sideEffects": false,
   "scripts": {
     "pretest": "node_modules/.bin/eslint .",
     "eslint": "node_modules/.bin/eslint .",
@@ -11,7 +13,9 @@
     "postcoverage": "node_modules/.bin/codecov",
     "precompile": "npm test",
     "preversion": "npm test",
-    "build": "rimraf lib/* && node_modules/.bin/babel src -d lib",
+    "build": "rimraf lib/* && npm run build:module && npm run build:cjs",
+    "build:module": "BABEL_ENV=module node_modules/.bin/babel src -d lib/module",
+    "build:cjs": "node_modules/.bin/babel src -d lib/cjs",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
