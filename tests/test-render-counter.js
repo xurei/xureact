@@ -65,7 +65,7 @@ describe('RenderCounter', function() {
 		it('should increment the counter and show it in the log', function() {
 			//Prepare
 			const TestComponent = RenderCounter(FakeComponent.Class); //eslint-disable-line no-unused-vars
-			spyLog.reset();
+			spyLog.resetHistory();
 			
 			const component = mount(
 				<TestComponent val={42}/>
@@ -101,7 +101,7 @@ describe('RenderCounter', function() {
 		it('should increment the counter and show it in the log', function() {
 			//Prepare
 			const TestComponent = RenderCounter(FakeComponent.Class); //eslint-disable-line no-unused-vars
-			spyLog.reset();
+			spyLog.resetHistory();
 			
 			const component = mount(
 				<TestComponent val={42}/>
@@ -125,7 +125,7 @@ describe('RenderCounter', function() {
 		it('should use this label in the log', function() {
 			//Prepare
 			const TestComponent = RenderCounter(FakeComponent.Class, (component => `TestComponent_${component.props.label}`)); //eslint-disable-line no-unused-vars
-			spyLog.reset();
+			spyLog.resetHistory();
 			
 			const component1 = mount(
 				<TestComponent val={42} label={'i1'}/>
