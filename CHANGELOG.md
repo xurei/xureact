@@ -1,5 +1,16 @@
 #Changelog 
 
+## 1.1.1 - 2018-05-09
+- Updated build script for better standard
+- Fixed warnings in RatioPlaceholder
+- Updated dependencies
+
+## 1.1.0 - 2018-05-09
+- Removed is-react-component
+
+## 1.0.7 - 2018-04-30
+- Updated tests; no source changed
+
 ## 1.0.6 - 2017-12-04
 - VCenter - add `className` prop
 
