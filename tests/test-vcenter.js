@@ -10,7 +10,7 @@ require('jsdom-global')();
 const describe = global.describe;
 const it = global.it;
 
-import VCenter from '../src/components/layout/react-vcenter';
+import { VCenter } from '../src/index';
 
 /** @namespace describe */
 /** @namespace it */

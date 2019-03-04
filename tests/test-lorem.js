@@ -10,7 +10,7 @@ require('jsdom-global')();
 const describe = global.describe;
 const it = global.it;
 
-const Lorem = require('../src/components/react-lorem').default; //eslint-disable-line no-unused-vars
+import { Lorem } from '../src/index';
 
 /** @namespace describe */
 /** @namespace it */

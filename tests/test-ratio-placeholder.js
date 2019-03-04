@@ -10,9 +10,7 @@ require('jsdom-global')();
 const describe = global.describe;
 const it = global.it;
 
-import RatioPlaceholder from '../src/components/layout/react-ratio-placeholder';
-
-//const RatioPlaceHolder = require('../src/components/layout/react-ratio-placeholder').default; //eslint-disable-line no-unused-vars
+import { RatioPlaceholder } from '../src/index';
 
 /** @namespace describe */
 /** @namespace it */

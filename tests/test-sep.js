@@ -10,7 +10,7 @@ require('jsdom-global')();
 const describe = global.describe;
 const it = global.it;
 
-const Sep = require('../src/components/sep').default; //eslint-disable-line no-unused-vars
+import { Sep } from '../src/index';
 
 /** @namespace describe */
 /** @namespace it */

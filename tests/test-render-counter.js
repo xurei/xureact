@@ -13,7 +13,7 @@ const it = global.it;
 const beforeEach = global.beforeEach;
 const afterEach = global.afterEach;
 
-const RenderCounter = require ('../src/index').RenderCounter;
+import { RenderCounter } from '../src/index';
 
 const FakeComponent = require('./util/fake-component');
 
