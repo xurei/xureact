@@ -1,5 +1,9 @@
 #Changelog 
 
+## 1.1.3 - 2019-01-18
+- Updated mocha
+- Add `<Sep>`
+
 ## 1.1.2 - 2019-01-18
 - Webpack Tree-shaking friendly build.
 
