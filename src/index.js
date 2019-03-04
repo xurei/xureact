@@ -1,13 +1,12 @@
 //-- UTILS -------------------------------------------------------------------------------------------------------------
 
 //-- WRAPPERS ----------------------------------------------------------------------------------------------------------
-import RenderCounter from './wrappers/render-counter';
+export RenderCounter from './wrappers/render-counter';
 
 //-- COMPONENTS --------------------------------------------------------------------------------------------------------
-import Lorem from './components/react-lorem';
+export Lorem from './components/react-lorem';
+export Sep from './components/sep';
 
 //-- COMPONENTS.LAYOUT -------------------------------------------------------------------------------------------------
-import VCenter from './components/layout/react-vcenter';
-import RatioPlaceholder from './components/layout/react-ratio-placeholder';
-
-export { RenderCounter, Lorem, VCenter, RatioPlaceholder };
+export VCenter from './components/layout/react-vcenter';
+export RatioPlaceholder from './components/layout/react-ratio-placeholder';

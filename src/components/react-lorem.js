@@ -1,6 +1,6 @@
-const React = require('react'); //eslint-disable-line no-unused-vars
-const PropTypes = require('prop-types');
-const deepEqual = require('deep-eql');
+import React from 'react'; //eslint-disable-line no-unused-vars
+import PropTypes from 'prop-types';
+import deepEqual from 'deep-eql';
 
 const defaultSampleWords = (
 	'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada justo id lobortis bibendum. ' +

@@ -1,5 +1,5 @@
-import React from 'react';
-import * as PropTypes from 'prop-types';
+import React from 'react'; //eslint-disable-line no-unused-vars
+import PropTypes from 'prop-types';
 
 /**
  * Div with a W:H ratio

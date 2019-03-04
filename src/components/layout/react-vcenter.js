@@ -1,5 +1,5 @@
-const React = require('react'); //eslint-disable-line no-unused-vars
-const PropTypes = require('prop-types');
+import React from 'react'; //eslint-disable-line no-unused-vars
+import PropTypes from 'prop-types';
 
 const style = {
 	display: 'block',
