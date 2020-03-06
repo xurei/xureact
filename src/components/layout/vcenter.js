@@ -1,32 +1,30 @@
 import React from 'react'; //eslint-disable-line no-unused-vars
-import PropTypes from 'prop-types';
+import { getIEVersion } from '../../util/get-ie-version';
+const ieVersion = getIEVersion();
+const isIE9 = 0 < ieVersion && ieVersion <= 9;
 
-const style = {
-	display: 'block',
-	position: 'relative',
-	top: '50%',
-	transform: 'translateY(-50%)',
+const commonStyle = {
+	position: 'absolute', width: '100%', height: '100%', left: 0, top: 0,
 };
+const parentStyle = Object.assign({}, commonStyle, isIE9 ? {
+	display: 'table',
+} : {
+	display: 'flex', alignItems: 'center',
+});
 
-/**
- * Vertical centering of children
- */
-class VCenter extends React.Component {
-	static propTypes = { //eslint-disable-line no-undef
-		style: PropTypes.object,
-		className: PropTypes.string,
-	};
-	
-	render() {
-		const props = this.props;
-		const mystyle = Object.assign({}, props.style, style);
-		return (
-			<div style={mystyle} className={props.className || ''}>
+const childStyle = isIE9 ? {
+	display: 'table-cell', verticalAlign: 'middle',
+} : null;
+
+const VCenter = (props) => {
+	return (
+		<div style={parentStyle}>
+			<div style={childStyle}>
 				{props.children}
 			</div>
-		);
-	}
-}
+		</div>
+	);
+};
 
 export default VCenter;
 

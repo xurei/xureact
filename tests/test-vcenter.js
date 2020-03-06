@@ -26,22 +26,9 @@ describe('VCenter', function() {
 					Hello world
 				</VCenter>
 			);
-			
+
 			//Verify
-			expect(component.html()).to.eq('<div style="display:block;position:relative;top:50%;transform:translateY(-50%);" class="my-vcenter">Hello world</div>');
-		});
-	});
-	describe('with custom styles', function() {
-		it('returns the correct HTML code', function() {
-			//Prepare + Execute
-			const component = shallow(
-				<VCenter className="my-vcenter" style={{ background: 'red' }}> {/*eslint-disable-line react-native/no-inline-styles*/}
-					Hello world
-				</VCenter>
-			);
-			
-			//Verify
-			expect(component.html()).to.eq('<div style="background:red;display:block;position:relative;top:50%;transform:translateY(-50%);" class="my-vcenter"> Hello world</div>');
+			expect(component.html()).to.eq('<div style="position:absolute;width:100%;height:100%;left:0;top:0;display:flex;align-items:center;"><div>Hello world</div></div>');
 		});
 	});
 });
