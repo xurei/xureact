@@ -1,5 +1,9 @@
 #Changelog 
 
+## 1.2.0 - 2020-03-06
+- Add `<FlexLayout>`
+- Improved `<VCenter>`: backward compatibility with IE9 
+
 ## 1.1.3 - 2019-01-18
 - Updated mocha
 - Add `<Sep>`
