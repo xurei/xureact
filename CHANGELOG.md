@@ -1,5 +1,8 @@
 #Changelog 
 
+## 1.3.0 - 2020-11-18
+- Add `injectCss()`
+
 ## 1.2.0 - 2020-03-06
 - Add `<FlexLayout>`
 - Improved `<VCenter>`: backward compatibility with IE9 
