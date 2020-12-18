@@ -11,3 +11,7 @@ export Sep from './components/sep';
 //-- COMPONENTS.LAYOUT -------------------------------------------------------------------------------------------------
 export VCenter from './components/layout/vcenter';
 export RatioPlaceholder from './components/layout/ratio-placeholder';
+
+//-- COMPONENTS.FORM -------------------------------------------------------------------------------------------------
+export Checkbox from './components/form/checkbox';
+export { DefaultCheckboxRenderer } from './components/form/checkbox';
