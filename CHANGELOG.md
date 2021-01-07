@@ -1,4 +1,10 @@
-#Changelog 
+#Changelog
+ 
+## 1.3.2 - 2021-01-07
+- Checkbox - Removed warning in console
+
+## 1.3.1 - 2020-12-18
+- Add Checkbox
 
 ## 1.3.0 - 2020-11-18
 - Add `injectCss()`

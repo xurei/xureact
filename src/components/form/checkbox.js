@@ -53,6 +53,7 @@ class Checkbox extends React.Component {
                         opacity: 0,
                         position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
                     }}
+                    readOnly={true}
                     tabIndex={props.tabindex}
                     onFocus={this.handleFocus} onBlur={this.handleBlur}>
                     </input>
