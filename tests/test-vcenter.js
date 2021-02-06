@@ -28,7 +28,7 @@ describe('VCenter', function() {
 			);
 
 			//Verify
-			expect(component.html()).to.eq('<div style="position:absolute;width:100%;height:100%;left:0;top:0;display:flex;align-items:center;"><div>Hello world</div></div>');
+			expect(component.html()).to.eq('<div style="position:absolute;width:100%;height:100%;left:0;top:0;display:flex;align-items:center;"><div style="width:100%;">Hello world</div></div>');
 		});
 	});
 });
