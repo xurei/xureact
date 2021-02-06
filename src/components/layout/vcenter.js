@@ -13,8 +13,8 @@ const parentStyle = Object.assign({}, commonStyle, isIE9 ? {
 });
 
 const childStyle = isIE9 ? {
-	display: 'table-cell', verticalAlign: 'middle',
-} : null;
+	display: 'table-cell', verticalAlign: 'middle', width: '100%',
+} : { width: '100%' };
 
 const VCenter = (props) => {
 	return (
