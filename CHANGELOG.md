@@ -1,5 +1,8 @@
 #Changelog
  
+## 1.3.3 - 2021-02-20
+- Fixed getIEVersion() missing global in some types of build.
+
 ## 1.3.2 - 2021-01-07
 - Checkbox - Removed warning in console
 
