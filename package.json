@@ -66,6 +66,7 @@
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-security": "^1.4.0",
+    "fbjs": "^0.8.17",
     "jsdom": "^16.4.0",
     "jsdom-global": "^3.0.2",
     "lodash": "^4.17.19",
@@ -75,7 +76,6 @@
     "react-addons-test-utils": "^15.6.2",
     "react-dom": "^15.7.0",
     "react-test-renderer": "^15.7.0",
-    "react-tools": "^0.13.3",
     "rimraf": "^2.7.1",
     "sinon": "^7.5.0",
     "sinon-chai": "^3.5.0"
