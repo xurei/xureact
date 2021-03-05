@@ -24,7 +24,7 @@ describe('VCenter', function() {
 			const component = shallow(
 				<VCenter className="my-vcenter">
 					Hello world
-				</VCenter>
+				</VCenter>,
 			);
 
 			//Verify
