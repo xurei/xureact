@@ -4,13 +4,15 @@
 [![Codecov](https://img.shields.io/codecov/c/github/xurei/xureact.svg)](https://codecov.io/gh/xurei/xureact)
 [![GitHub issues](https://img.shields.io/github/issues/xurei/xureact.svg)](https://github.com/xurei/xureact/issues)
 [![Codacy grade](https://img.shields.io/codacy/grade/4a1aad470af24fa8950794b066560a11.svg)](https://www.codacy.com/app/xurei/xureact)
-[![Beerpay](https://beerpay.io/xurei/xureact/badge.svg?style=beer-square)](https://beerpay.io/xurei/xureact)
+<a href="https://github.com/sponsors/xurei" target="_blank">
+  <img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub" alt="Sponsor" />
+</a>
 
-React toolbox.
+A React toolbox.
 
 ### What's in there ?
 
-`xureact` is a toolbox of useful components.
+`xureact` is a toolbox of simple, useful components.
 
 ### Philosophy
 - Prefer Pure components : all React components in `xureact` are meant to be pure, *i.e.* they do not use `state`.
@@ -23,7 +25,5 @@ xureact contains three major types of element :
 1. **Wrappers** : similar to `ReactRedux.connect()` or `Styled()`, these are methods that decorates a pure component to give it extra features.
 1. **Utilitary** functions : any "classical" function that is useful within the context of `xureact`  
 
-## Support on Beerpay
-Hey dude! Help me out for a couple of :beers:!
-
-[![Beerpay](https://beerpay.io/xurei/xureact/badge.svg?style=beer-square)](https://beerpay.io/xurei/xureact)  [![Beerpay](https://beerpay.io/xurei/xureact/make-wish.svg?style=flat-square)](https://beerpay.io/xurei/xureact?focus=wish)
+## Support Open-Source ♥
+Support my work on https://github.com/sponsors/xurei
