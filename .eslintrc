@@ -1,6 +1,6 @@
 {
 	"extends": "xurei/react",
-	"parser": "babel-eslint",
+	"parser": "@babel/eslint-parser",
 
 	"plugins": [
 		"promise",

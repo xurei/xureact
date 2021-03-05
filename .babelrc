@@ -4,7 +4,6 @@
 		[
 			"@babel/preset-env",
 			{
-				"loose": true,
 				"shippedProposals": true,
 				"modules": "commonjs",
 				"targets": {

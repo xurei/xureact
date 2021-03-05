@@ -2,6 +2,7 @@ node_modules
 .wercker
 *.iml
 .idea/
+.nyc_output/
 /lab
 /coverage
 /lib
