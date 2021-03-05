@@ -98,7 +98,7 @@ class Checkbox extends React.Component {
 class DefaultCheckboxRenderer extends React.Component {
     static propTypes = {
         checked: PropTypes.bool.isRequired,
-        hover: PropTypes.bool.isRequired,
+        //hover: PropTypes.bool.isRequired,
         focus: PropTypes.bool.isRequired,
         disabled: PropTypes.bool,
     };
